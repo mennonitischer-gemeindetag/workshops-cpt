@@ -1,0 +1,54 @@
+{
+	"title": "Workshop",
+	"icon": "groups",
+	"description": "Workshop Meta.",
+	"category": "widgets",
+	"attributes": {
+		"nr": {
+			"type": "number",
+			"source": "meta",
+			"meta": "nr"
+		},
+		"character": {
+			"type": "string",
+			"source": "meta",
+			"meta": "character"
+		},
+		"preis": {
+			"type": "string",
+			"source": "meta",
+			"meta": "preis"
+		},
+		"leiter": {
+			"type": "string",
+			"source": "meta",
+			"meta": "leiter"
+		},
+		"beschreibung": {
+			"type": "string",
+			"source": "meta",
+			"meta": "beschreibung"
+		},
+		"startZeit": {
+			"type": "string",
+			"source": "meta",
+			"meta": "startZeit"
+		},
+		"endZeit": {
+			"type": "string",
+			"source": "meta",
+			"meta": "endZeit"
+		},
+		"beschraenkt": {
+			"type": "boolean",
+			"source": "meta",
+			"meta": "beschraenkt"
+		},
+		"maxPlaetze": {
+			"type": "number",
+			"default": "40",
+			"source": "meta",
+			"meta": "maxPlaetze"
+		}
+	}
+}

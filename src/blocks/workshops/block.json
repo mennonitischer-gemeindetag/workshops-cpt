@@ -1,0 +1,21 @@
+{
+	"title": "Workshops",
+	"icon": "groups",
+	"description": "Workshops",
+	"category": "widgets",
+	"attributes": {
+		"date": {
+			"type": "string"
+		},
+		"isBefore": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		]
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"name": "workshops",
+	"version": "1.0.0",
+	"description": "WordPress Plugin that creates different Gutenberg Blocks that work in conjuncton with the Arvernus Theme.",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "wp-scripts start src/index.js src/frontend.js",
+		"build": "wp-scripts build src/index.js src/frontend.js",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"test:e2e": "wp-scripts test-e2e",
+		"test:unit": "wp-scripts test-unit-js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://fabiankaegy@github.com/Arvernus/Projects---Custom-Post-Type.git"
+	},
+	"author": "fabiankaegy",
+	"bugs": {
+		"url": "https://github.com/Arvernus/Projects---Custom-Post-Type/issues"
+	},
+	"homepage": "https://github.com/Arvernus/Projects---Custom-Post-Type#readme",
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^3.1.0",
+		"@wordpress/scripts": "^5.0.0"
+	},
+	"dependencies": {}
+}
