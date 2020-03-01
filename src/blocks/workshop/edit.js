@@ -3,7 +3,8 @@ import {
   TextControl,
   TextareaControl,
   CheckboxControl,
-  RangeControl
+  RangeControl,
+  ToggleControl
 } from "@wordpress/components";
 import { Fragment } from "@wordpress/element";
 
@@ -18,7 +19,8 @@ export default props => {
       nr,
       endZeit,
       startZeit,
-      preis
+      preis,
+      registrationClosed
     },
     className,
     setAttributes
@@ -88,6 +90,11 @@ export default props => {
             />
           </span>
         </div>
+        <ToggleControl 
+          label="Registration Closed"
+          checked={ registrationClosed }
+          onChange={ ( newValue ) => setAttributes( { registrationClosed: newValue } ) }
+        />
       </div>
     </Fragment>
   );

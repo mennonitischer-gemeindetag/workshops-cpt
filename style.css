@@ -21,12 +21,12 @@
   display: flex;
   align-items: center;
   background-color: rgba(21, 149, 47, 0.2);
-  color: var(--accent-color);
+  color: var(--c-accent);
 }
 .wp-block-workshopscpt-workshops .workshop header .workshop-nummer {
   height: 100%;
   width: 50px;
-  background-color: var(--accent-color);
+  background-color: var(--c-accent);
   display: block;
   padding: 10px 10px;
 }
@@ -40,7 +40,7 @@
 .wp-block-workshopscpt-workshops .workshop header .workshop-leiter {
   font-size: 1.2em;
   display: block;
-  color: var(--accent-color);
+  color: var(--c-accent);
   margin: 0;
   padding-left: 10px;
 }
@@ -52,7 +52,7 @@
 .wp-block-workshopscpt-workshops .workshop h2 {
   margin-top: 0;
   font-size: 1.8em;
-  color: var(--accent-color);
+  color: var(--c-accent);
 }
 .wp-block-workshopscpt-workshops .workshop footer {
   color: #bcbcbc;

@@ -76,12 +76,15 @@ function myplugin_workshops_modify_columns( $columns ) {
 
 	// New columns to add to table
 	$new_columns = [
-		'workshop_nummer' => __( 'Nummer', 'myplugin_textdomain' ),
-		'leiter'          => __( 'Leiter', 'myplugin_textdomain' ),
+		'workshop_nummer' => 'Nummer',
+		'leiter'          => 'Leiter',
+		'anmeldungen'     => 'Anmeldungen',
 	];
 
 	// Remove unwanted publish date column
 	unset( $columns['date'] );
+
+	// rename columns
 	$columns['title'] = 'Workshop';
 
 	// Combine existing columns with new columns
@@ -125,6 +128,31 @@ function myplugin_workshops_custom_column_content( $column ) {
 
 			// Echo output and then include break statement
 			echo ( ! empty( $leiter ) ? esc_attr( "$leiter" ) : '' );
+			break;
+
+		case 'anmeldungen':
+			$post_id = $post->ID;
+			$query   = new \WP_Query(
+				[
+					'post_type'      => 'anmeldung',
+					'posts_per_page' => -1,
+					'meta_query'     => [
+						'relation' => 'AND',
+						[
+							'key'     => 'workshops',
+							'value'   => $post_id,
+							'compare' => 'LIKE',
+						],
+						[
+							'key'     => 'status',
+							'value'   => 'storniert',
+							'compare' => 'NOT',
+						],
+					],
+				]
+			);
+
+			echo esc_attr( $query->found_posts );
 			break;
 
 	}

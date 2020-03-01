@@ -9,6 +9,11 @@
 			"source": "meta",
 			"meta": "nr"
 		},
+		"registrationClosed": {
+			"type": "boolean",
+			"source": "meta",
+			"meta": "registrationClosed"
+		},
 		"character": {
 			"type": "string",
 			"source": "meta",
