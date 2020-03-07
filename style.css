@@ -13,6 +13,7 @@
 }
 
 .wp-block-workshopscpt-workshops .workshop {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -57,4 +58,14 @@
 .wp-block-workshopscpt-workshops .workshop footer {
   color: #bcbcbc;
   margin-bottom: 0;
+}
+
+.wp-block-workshopscpt-workshops .workshop .registration-closed {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--c-warnung);
+  color: white;
+  border-radius: 8px;
+  padding: 2px 10px;
 }
