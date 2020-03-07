@@ -53,6 +53,7 @@ function custom_post_type_workshops() {
 		'template'              => [
 			[ 'gemeindetag/workshop', [] ],
 			[ 'gemeindetag/anmeldungen', [] ],
+			[ 'gemeindetag/send-email', [] ],
 		],
 		'template_lock'         => 'all', // or 'insert' to allow moving
 	];
@@ -72,7 +73,7 @@ add_action( 'init', __NAMESPACE__ . '\custom_post_type_workshops', 0 );
  * @param Array $columns The existing columns
  * @return Array $filtered_columns The filtered columns
  */
-function myplugin_workshops_modify_columns( $columns ) {
+function workshops_modify_columns( $columns ) {
 
 	// New columns to add to table
 	$new_columns = [
@@ -95,7 +96,7 @@ function myplugin_workshops_modify_columns( $columns ) {
 }
 
 // Let WordPress know to use our filter
-add_filter( 'manage_workshops_posts_columns', __NAMESPACE__ . '\myplugin_workshops_modify_columns' );
+add_filter( 'manage_workshops_posts_columns', __NAMESPACE__ . '\workshops_modify_columns' );
 
 
 /**
@@ -106,7 +107,7 @@ add_filter( 'manage_workshops_posts_columns', __NAMESPACE__ . '\myplugin_worksho
  * @param String $column The name of the column being acted upon
  * @return void
  */
-function myplugin_workshops_custom_column_content( $column ) {
+function workshops_custom_column_content( $column ) {
 
 	// Get the post object for this row so we can output relevant data
 	global $post;
@@ -146,7 +147,7 @@ function myplugin_workshops_custom_column_content( $column ) {
 						[
 							'key'     => 'status',
 							'value'   => 'storniert',
-							'compare' => 'NOT',
+							'compare' => '!=',
 						],
 					],
 				]
@@ -159,7 +160,7 @@ function myplugin_workshops_custom_column_content( $column ) {
 }
 
 // Let WordPress know to use our action
-add_action( 'manage_workshops_posts_custom_column', __NAMESPACE__ . '\myplugin_workshops_custom_column_content' );
+add_action( 'manage_workshops_posts_custom_column', __NAMESPACE__ . '\workshops_custom_column_content' );
 
 
 /**
@@ -169,7 +170,7 @@ add_action( 'manage_workshops_posts_custom_column', __NAMESPACE__ . '\myplugin_w
  * @param Array $columns The original columns
  * @return Array $columns The filtered columns
  */
-function myplugin_workshops_custom_columns_sortable( $columns ) {
+function workshops_custom_columns_sortable( $columns ) {
 
 	// Add our columns to $columns array
 	$columns['workshop_nummer'] = 'workshop_nummer';
@@ -179,4 +180,4 @@ function myplugin_workshops_custom_columns_sortable( $columns ) {
 }
 
 // Let WordPress know to use our filter
-add_filter( 'manage_edit-workshops_sortable_columns', __NAMESPACE__ . '\myplugin_workshops_custom_columns_sortable' );
+add_filter( 'manage_edit-workshops_sortable_columns', __NAMESPACE__ . '\workshops_custom_columns_sortable' );
