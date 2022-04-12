@@ -2,7 +2,7 @@
 /**
  * gemeindetag workshop cpt
  *
- * @package gemeindetag-workshop
+ * @package workshops-cpt
  */
 
 namespace gemeindetag\workshops;

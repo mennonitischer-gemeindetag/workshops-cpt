@@ -2,7 +2,7 @@
 /**
  * template for a single workshop
  *
- * @package gemeindetage-workshops
+ * @package workshops-cpt
  */
 
 	$start_date          = get_post_meta( get_the_ID(), 'startZeit', true );

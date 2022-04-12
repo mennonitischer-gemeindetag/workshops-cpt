@@ -1,7 +1,7 @@
 {
-	"name": "workshops",
+	"name": "workshops-cpt",
 	"version": "1.0.0",
-	"description": "WordPress Plugin that creates different Gutenberg Blocks that work in conjuncton with the Arvernus Theme.",
+	"description": "Manage Workshops through a Custom Post Type.",
 	"main": "src/index.js",
 	"scripts": {
 		"start": "wp-scripts start src/index.js src/frontend.js",
@@ -16,16 +16,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://fabiankaegy@github.com/Arvernus/Projects---Custom-Post-Type.git"
+		"url": "git+https://github.com/mennonitischer-gemeindetag/workshops-cpt.git"
 	},
 	"author": "fabiankaegy",
 	"bugs": {
-		"url": "https://github.com/Arvernus/Projects---Custom-Post-Type/issues"
+		"url": "https://github.com/mennonitischer-gemeindetag/workshops-cpt/issues"
 	},
-	"homepage": "https://github.com/Arvernus/Projects---Custom-Post-Type#readme",
-	"devDependencies": {
-		"@wordpress/eslint-plugin": "^3.1.0",
-		"@wordpress/scripts": "^5.0.0"
-	},
-	"dependencies": {}
+	"homepage": "https://github.com/mennonitischer-gemeindetag/workshops-cpt#readme",
+	"dependencies": {
+		"@wordpress/scripts": "^22.4.0"
+	}
 }

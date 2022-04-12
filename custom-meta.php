@@ -2,7 +2,7 @@
 /**
  * custom meta
  *
- * @package gemeindetage-workshops
+ * @package workshops-cpt
  */
 
 namespace gemeindetag\workshops;

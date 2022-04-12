@@ -1,22 +1,30 @@
 <?php
 /**
  * Plugin Name: Workshops Custom Post Type
- * Description: WordPress CPT Workshops.
+ * Description: Manage Workshops through a Custom Post Type.
  * Author: Fabian Kägy
- * Author URI: fabian-kaegy.de
+ * Author URI: fabian-kaegy.com
  * Version: 1.0.0
- * License: UNLICENSED
+ * License: GLPv2
+ *
+ * @package workshops-cpt
  */
 
 namespace gemeindetag\workshops;
 
-//  Exit if accessed directly.
-defined('ABSPATH') || exit;
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
+/**
+ * get plugin directory
+ */
 function _get_plugin_directory() {
 	return __DIR__;
 }
 
+/**
+ * get plugin url
+ */
 function _get_plugin_url() {
 	static $plugin_url;
 
@@ -27,7 +35,7 @@ function _get_plugin_url() {
 	return $plugin_url;
 }
 
-include _get_plugin_directory() . '/enqueue-scripts.php';
-include _get_plugin_directory() . '/workshops.php';
-include _get_plugin_directory() . '/workshops-cpt.php';
-include _get_plugin_directory() . '/custom-meta.php';
+require _get_plugin_directory() . '/enqueue-scripts.php';
+require _get_plugin_directory() . '/workshops.php';
+require _get_plugin_directory() . '/workshops-cpt.php';
+require _get_plugin_directory() . '/custom-meta.php';
