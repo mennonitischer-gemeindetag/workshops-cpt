@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Workshops Custom Post Type
+ * Plugin Name: Workshops
  * Description: Manage Workshops through a Custom Post Type.
  * Author: Fabian Kägy
  * Author URI: fabian-kaegy.com
