@@ -4,8 +4,9 @@ import metadata from "./block.json";
 import edit from "./edit";
 import save from "./save";
 
-registerBlockType("gemeindetag/workshops", {
-  ...metadata,
+import "./index.css";
+
+registerBlockType(metadata, {
   edit,
   save
 });

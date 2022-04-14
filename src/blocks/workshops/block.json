@@ -1,8 +1,10 @@
 {
+	"name": "gemeindetag/workshops",
 	"title": "Workshops",
 	"icon": "groups",
 	"description": "Workshops",
 	"category": "widgets",
+	"apiVersion": 2,
 	"attributes": {
 		"date": {
 			"type": "string"
@@ -17,5 +19,7 @@
 			"wide",
 			"full"
 		]
-	}
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./index.css"
 }
