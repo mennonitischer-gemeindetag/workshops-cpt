@@ -6,6 +6,15 @@
 	"description": "Edit the meta information of a Workshop in the editor.",
 	"category": "widgets",
 	"attributes": {},
+	"supports": {
+		"multiple": false,
+		"html": false,
+		"lock": false
+	},
+	"usesContext": [
+		"postType",
+		"postId"
+	],
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css"
 }
